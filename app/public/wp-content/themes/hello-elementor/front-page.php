@@ -287,8 +287,12 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- LOGOMARCA OFICIAL ARACAJU -->
-                <a href="#" class="flex items-center gap-3 shrink min-w-0">
-                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-12 sm:h-14 md:h-16 w-auto max-w-[180px] sm:max-w-[220px] object-contain rounded-lg shadow-sm border border-brand-gold/30">
+                <a href="#" class="flex items-center gap-3 shrink min-w-0 group">
+                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-11 sm:h-13 md:h-15 w-auto max-w-[50px] sm:max-w-[60px] md:max-w-[68px] object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105">
+                    <div class="flex flex-col justify-center">
+                        <span class="font-serif text-base sm:text-lg md:text-xl font-bold tracking-tight text-brand-navy leading-none">Jorge Santos</span>
+                        <span class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-brand-goldDark mt-0.5">Advocacia</span>
+                    </div>
                 </a>
 
                 <!-- NAVEGAÇÃO DESKTOP -->
@@ -896,7 +900,13 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                 
                 <!-- Coluna 1: Logo e Descrição -->
                 <div class="space-y-4">
-                    <img src="<?php echo esc_url( $footer_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia" loading="lazy" class="h-12 w-auto bg-brand-navy p-1 rounded-lg border border-brand-gold/30">
+                    <div class="flex items-center gap-3">
+                        <img src="<?php echo esc_url( $footer_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia" loading="lazy" class="h-12 w-auto max-w-[50px] bg-brand-navy p-1 rounded-lg border border-brand-gold/30">
+                        <div class="flex flex-col justify-center">
+                            <span class="font-serif text-lg font-bold tracking-tight text-white leading-none">Jorge Santos</span>
+                            <span class="text-[10px] font-semibold tracking-widest uppercase text-brand-gold mt-0.5">Advocacia</span>
+                        </div>
+                    </div>
                     <p class="text-xs leading-relaxed text-slate-300">
                         Atendimento jurídico especializado e estratégico para pessoas físicas e empresas em Aracaju e Sergipe.
                     </p>

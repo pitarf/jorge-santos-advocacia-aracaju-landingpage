@@ -2,6 +2,11 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.2] - 2026-09-10
+### Adicionado
+- **Tipografia Nobre da Marca ao Lado da Logo (Header e Footer)**:
+  - Inserido o letreiro estilizado e hierarquizado com o nome completo do escritório: **Jorge Santos** (em fonte serifada nobre e cor Navy) acompanhado de **ADVOCACIA** (em caixa alta, tracking expandido e tom dourado clássico) ao lado da logomarca oficial, tanto na barra de navegação principal (header) quanto no rodapé (footer).
+
 ## [3.4.1] - 2026-09-10
 ### Modificado
 - **Ajuste na Barra de Navegação a Pedido do Cliente**:
