@@ -1,0 +1,136 @@
+/*
+	Theme Name: Hello Elementor
+	Theme URI: https://elementor.com/hello-theme/
+	Description: Hello Elementor customizado para Jorge Santos Advocacia em Aracaju.
+	Author: Elementor Team & Jorge Santos Advocacia
+	Version: 3.5.1
+*/
+
+/* ==========================================================================
+   ESTILOS GLOBAIS DE ACORDEÃO / FAQ (NAVY & GOLD - SEM ROSA)
+   ========================================================================== */
+
+/* Elementor Accordion & Toggle Widgets Override */
+.elementor-accordion .elementor-accordion-item,
+.elementor-toggle .elementor-toggle-item,
+.faq-item {
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 12px !important;
+    margin-bottom: 12px !important;
+    overflow: hidden !important;
+    background-color: #FFFFFF !important;
+    box-shadow: 0 2px 8px rgba(14, 25, 40, 0.04) !important;
+    transition: all 0.3s ease !important;
+}
+
+.elementor-accordion .elementor-accordion-item:hover,
+.elementor-toggle .elementor-toggle-item:hover,
+.faq-item:hover {
+    border-color: #D1A748 !important;
+    box-shadow: 0 4px 14px rgba(209, 167, 72, 0.12) !important;
+}
+
+/* Título Fechado */
+.elementor-accordion .elementor-tab-title,
+.elementor-toggle .elementor-tab-title,
+.faq-toggle {
+    background-color: #FFFFFF !important;
+    color: #0E1928 !important;
+    font-weight: 700 !important;
+    padding: 18px 20px !important;
+    font-size: 15px !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+.elementor-accordion .elementor-tab-title:hover,
+.elementor-toggle .elementor-tab-title:hover,
+.faq-toggle:hover {
+    color: #B38B2F !important;
+}
+
+/* Título Aberto / Ativo */
+.elementor-accordion .elementor-tab-title.elementor-active,
+.elementor-toggle .elementor-tab-title.elementor-active,
+.faq-toggle.active-accordion {
+    background-color: #0E1928 !important;
+    color: #FFFFFF !important;
+}
+
+.elementor-accordion .elementor-tab-title.elementor-active a,
+.elementor-toggle .elementor-tab-title.elementor-active a {
+    color: #FFFFFF !important;
+}
+
+/* Ícones de Seta / Chevron */
+.elementor-accordion .elementor-tab-title .elementor-accordion-icon,
+.elementor-toggle .elementor-tab-title .elementor-toggle-icon,
+.faq-toggle i {
+    color: #D1A748 !important;
+    font-size: 14px !important;
+    fill: #D1A748 !important;
+}
+
+.elementor-accordion .elementor-tab-title.elementor-active .elementor-accordion-icon,
+.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon,
+.faq-toggle.active-accordion i {
+    color: #D1A748 !important;
+    fill: #D1A748 !important;
+}
+
+/* Conteúdo da Resposta */
+.elementor-accordion .elementor-tab-content,
+.elementor-toggle .elementor-tab-content,
+.faq-content {
+    background-color: #FFFFFF !important;
+    color: #475569 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+    padding: 18px 20px !important;
+    border-top: 1px solid #F1F5F9 !important;
+}
+
+.elementor-accordion .elementor-tab-content strong,
+.elementor-toggle .elementor-tab-content strong,
+.faq-content strong {
+    color: #0E1928 !important;
+}
+
+/* ==========================================================================
+   BOTÃO DE MENU MOBILE (ZERO ROSA / 100% NAVY & GOLD)
+   ========================================================================== */
+#mobileMenuBtn,
+button#mobileMenuBtn,
+.site-header button#mobileMenuBtn {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    color: #0E1928 !important;
+    outline: none !important;
+    box-shadow: 0 1px 3px rgba(14, 25, 40, 0.05) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+}
+
+#mobileMenuBtn:hover,
+#mobileMenuBtn:focus,
+#mobileMenuBtn:active {
+    background-color: #F8FAFC !important;
+    border-color: #D1A748 !important;
+    color: #D1A748 !important;
+    outline: none !important;
+    box-shadow: 0 2px 8px rgba(209, 167, 72, 0.15) !important;
+}
+
+#mobileMenuBtn i {
+    color: #0E1928 !important;
+}
+
+#mobileMenuBtn:hover i,
+#mobileMenuBtn:focus i {
+    color: #D1A748 !important;
+}
