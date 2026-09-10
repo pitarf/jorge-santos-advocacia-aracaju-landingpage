@@ -2,6 +2,11 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.4] - 2026-09-10
+### Modificado
+- **Ajuste de Redação na Faixa de Destaques**:
+  - Alterado o texto sob a localização de "Atendimento Local e Online" para "**Atendimento Presencial e Online**", deixando explícita a modalidade de atendimento presencial no escritório em conjunto com a consultoria online.
+
 ## [3.4.3] - 2026-09-10
 ### Adicionado / Modificado
 - **Favicon Oficial do Escritório (Aba do Navegador e Barra de Endereço)**:

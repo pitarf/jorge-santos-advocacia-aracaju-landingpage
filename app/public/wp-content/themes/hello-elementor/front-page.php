@@ -444,7 +444,7 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
             </div>
             <div class="p-2 border-r border-brand-navyLight/60 last:border-none" data-aos="fade-up" data-aos-delay="200">
                 <div class="text-2xl sm:text-3xl font-extrabold text-white"><?php echo esc_html( $contact_address ); ?></div>
-                <div class="text-xs sm:text-sm text-slate-300 mt-1">Atendimento Local e Online</div>
+                <div class="text-xs sm:text-sm text-slate-300 mt-1">Atendimento Presencial e Online</div>
             </div>
             <a href="<?php echo esc_url( $hero_cta_link ); ?>" target="_blank" class="p-2 border-r border-brand-navyLight/60 last:border-none hover:bg-brand-navyLight/60 rounded-lg transition-colors group block" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-xl sm:text-2xl md:text-3xl font-extrabold text-accent-green group-hover:underline flex items-center justify-center gap-1.5 flex-wrap">
