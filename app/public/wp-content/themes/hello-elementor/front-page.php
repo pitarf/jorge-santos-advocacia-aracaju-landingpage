@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 $post_id = get_the_ID();
 
 // Identidade Visual & Branding (Dinâmicos via Metabox ou Jorge Santos SEO)
-$header_logo = get_post_meta( $post_id, 'jsa_header_logo', true ) ?: get_option( 'jsa_header_logo', home_url( '/wp-content/uploads/2026/08/logo_jfs_horizontal.png' ) );
-$footer_logo = get_post_meta( $post_id, 'jsa_footer_logo', true ) ?: get_option( 'jsa_footer_logo', home_url( '/wp-content/uploads/2026/08/logo_jfs_horizontal.png' ) );
+$header_logo = get_post_meta( $post_id, 'jsa_header_logo', true ) ?: get_option( 'jsa_header_logo', get_template_directory_uri() . '/assets/images/logo_jfs_quadrada_nobre.jpg' );
+$footer_logo = get_post_meta( $post_id, 'jsa_footer_logo', true ) ?: get_option( 'jsa_footer_logo', get_template_directory_uri() . '/assets/images/logo_jfs_quadrada_nobre.jpg' );
 $custom_favicon = get_post_meta( $post_id, 'jsa_custom_favicon', true ) ?: get_option( 'jsa_custom_favicon', home_url( '/wp-content/uploads/2026/08/cropped-logo-1-1-32x32.jpeg' ) );
 
 // Dados Dinâmicos da Página - Padrão Aracaju / SE
@@ -288,7 +288,7 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
             <div class="flex items-center justify-between h-20">
                 <!-- LOGOMARCA OFICIAL ARACAJU -->
                 <a href="#" class="flex items-center gap-3 shrink min-w-0">
-                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-10 sm:h-12 md:h-14 max-w-[200px] sm:max-w-[260px] md:max-w-none w-auto object-contain rounded">
+                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-12 sm:h-14 md:h-16 w-auto max-w-[180px] sm:max-w-[220px] object-contain rounded-lg shadow-sm border border-brand-gold/30">
                 </a>
 
                 <!-- NAVEGAÇÃO DESKTOP -->

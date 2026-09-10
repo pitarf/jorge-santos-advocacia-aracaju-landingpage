@@ -2,6 +2,13 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.0] - 2026-09-10
+### Modificado
+- **Atualização da Logomarca Nobre do Escritório na Navbar e Rodapé**:
+  - Implementada a nova identidade visual oficial quadrada em dourado nobre 3D com relevo (`logo_jfs_quadrada_nobre.jpg`) com a assinatura *JFS Advocacia e Consultoria*.
+  - Configurado o fallback nativo no tema (`hello-elementor/assets/images/`) para garantia de exibição imediata em qualquer ambiente (local ou produção).
+  - Otimizada a proporção visual na navbar móvel e desktop (`h-12 sm:h-14 md:h-16`) com bordas suaves e moldura dourada sutil.
+
 ## [3.3.0] - 2026-09-10
 ### Adicionado
 - **Configuração de Versionamento Git e Guia de Deploy para Produção**:

@@ -36,6 +36,7 @@ wp-config.php
 app/public/wp-content/uploads/*
 !app/public/wp-content/uploads/2026/08/logo_jfs_horizontal.png
 !app/public/wp-content/uploads/2026/08/logo_js_quadrada.png
+!app/public/wp-content/uploads/2026/08/logo_jfs_quadrada_nobre.jpg
 !app/public/wp-content/uploads/2026/08/foto-1.jpeg
 !app/public/wp-content/uploads/2026/08/foto-3.jpeg
 !app/public/wp-content/uploads/2026/08/cropped-logo-1-1-32x32.jpeg

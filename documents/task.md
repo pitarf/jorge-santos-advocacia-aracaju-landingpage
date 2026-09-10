@@ -19,3 +19,4 @@
 - [x] Formulário inteligente integrado ao WhatsApp com texto estruturado para Aracaju
 - [x] Ajuste integral de responsividade Mobile-First (eliminação de overflow horizontal, botões flexíveis e contenção de grid de 320px a 1440px)
 - [x] Configuração de versionamento Git (.gitignore inteligente) e elaboração do guia completo de deploy para Produção
+- [x] Atualização da logomarca oficial quadrada em dourado nobre 3D na navbar e rodapé a pedido do cliente
