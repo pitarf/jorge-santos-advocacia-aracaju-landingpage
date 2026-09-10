@@ -2,11 +2,15 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.1] - 2026-09-10
+### Modificado
+- **Ajuste na Barra de Navegação a Pedido do Cliente**:
+  - Removido o ícone/selo dourado (`fa-scale-balanced`) que acompanhava a logo na navbar, mantendo a apresentação da marca limpa, discreta e focada unicamente na logomarca oficial do escritório (`logo_jfs_quadrada_nobre.jpg`).
+
 ## [3.4.0] - 2026-09-10
 ### Modificado
 - **Atualização da Logomarca Nobre do Escritório na Navbar e Rodapé**:
   - Implementada a nova identidade visual oficial quadrada em dourado nobre 3D com relevo (`logo_jfs_quadrada_nobre.jpg`) com a assinatura *JFS Advocacia e Consultoria*.
-  - Adicionado selo dourado premium com o ícone de balança (`fa-scale-balanced`) ao lado da logomarca na barra de navegação, harmonizando com a identidade visual da advocacia.
   - Configurado o fallback nativo no tema (`hello-elementor/assets/images/`) para garantia de exibição imediata em qualquer ambiente (local ou produção).
   - Otimizada a proporção visual na navbar móvel e desktop com bordas suaves e moldura dourada sutil.
 

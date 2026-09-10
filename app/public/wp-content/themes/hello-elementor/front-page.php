@@ -286,13 +286,9 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all" data-aos="fade-down" data-aos-duration="600" data-aos-delay="100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- LOGOMARCA OFICIAL ARACAJU COM ÍCONE DOURADO -->
-                <a href="#" class="flex items-center gap-2.5 sm:gap-3.5 shrink min-w-0 group">
-                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-11 sm:h-13 md:h-15 w-auto max-w-[140px] sm:max-w-[190px] object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105">
-                    <div class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg gold-gradient-bg text-brand-navy shadow-sm border border-amber-300/60 font-bold text-xs shrink-0">
-                        <i class="fa-solid fa-scale-balanced text-sm text-brand-navy"></i>
-                        <span class="hidden sm:inline text-[11px] font-extrabold uppercase tracking-wider">Advocacia</span>
-                    </div>
+                <!-- LOGOMARCA OFICIAL ARACAJU -->
+                <a href="#" class="flex items-center gap-3 shrink min-w-0">
+                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-12 sm:h-14 md:h-16 w-auto max-w-[180px] sm:max-w-[220px] object-contain rounded-lg shadow-sm border border-brand-gold/30">
                 </a>
 
                 <!-- NAVEGAÇÃO DESKTOP -->
