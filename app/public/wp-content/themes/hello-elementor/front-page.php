@@ -290,10 +290,10 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
             <div class="flex items-center justify-between h-20">
                 <!-- LOGOMARCA OFICIAL ARACAJU -->
                 <a href="#" class="flex items-center gap-2.5 sm:gap-3 shrink min-w-0 group">
-                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-13 sm:h-14 md:h-16 w-auto max-w-[58px] sm:max-w-[65px] md:max-w-[72px] object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105">
-                    <div class="flex flex-col justify-center">
-                        <span class="font-serif text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-brand-navy leading-none">Jorge Santos</span>
-                        <span class="text-[11px] sm:text-xs font-semibold tracking-widest uppercase text-brand-goldDark mt-1">Advocacia</span>
+                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 max-h-12 sm:max-h-14 md:max-h-16 max-w-12 sm:max-w-14 md:max-w-16 shrink-0 object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105" style="width: 50px !important; height: 50px !important; max-width: 50px !important; max-height: 50px !important; object-fit: contain !important;">
+                    <div class="flex flex-col justify-center shrink min-w-0">
+                        <span class="font-serif text-base sm:text-lg md:text-xl font-bold tracking-tight text-brand-navy leading-none whitespace-nowrap">Jorge Santos</span>
+                        <span class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-brand-goldDark mt-1 whitespace-nowrap">Advocacia</span>
                     </div>
                 </a>
 
