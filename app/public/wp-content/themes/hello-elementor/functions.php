@@ -297,3 +297,34 @@ add_action( 'admin_bar_menu', function( $wp_admin_bar ) {
 		] );
 	}
 }, 80 );
+
+/**
+ * Força Globalmente o Favicon Oficial (Templo / Colunas Dourado)
+ * Substitui o site-icon nativo do WordPress para eliminar qualquer ícone antigo em cache
+ */
+add_action( 'wp_head', function() {
+    // Remove o renderizador nativo de favicon do WordPress
+    remove_action( 'wp_head', 'wp_site_icon', 99 );
+}, 0 );
+
+add_filter( 'get_site_icon_url', function( $url, $size, $blog_id ) {
+    if ( $size >= 180 ) {
+        return get_template_directory_uri() . '/assets/images/favicon-192x192.png?v=' . time();
+    }
+    return get_template_directory_uri() . '/assets/images/favicon-32x32.png?v=' . time();
+}, 9999, 3 );
+
+add_filter( 'site_icon_meta_tags', function( $meta_tags ) {
+    $v = time();
+    $icon32 = get_template_directory_uri() . '/assets/images/favicon-32x32.png?v=' . $v;
+    $icon192 = get_template_directory_uri() . '/assets/images/favicon-192x192.png?v=' . $v;
+    $apple = get_template_directory_uri() . '/assets/images/apple-touch-icon.png?v=' . $v;
+
+    return [
+        sprintf( '<link rel="icon" href="%s" sizes="32x32" />', esc_url( $icon32 ) ),
+        sprintf( '<link rel="icon" href="%s" sizes="192x192" />', esc_url( $icon192 ) ),
+        sprintf( '<link rel="apple-touch-icon" href="%s" />', esc_url( $apple ) ),
+        sprintf( '<meta name="msapplication-TileImage" content="%s" />', esc_url( $icon192 ) ),
+    ];
+}, 9999 );
+
