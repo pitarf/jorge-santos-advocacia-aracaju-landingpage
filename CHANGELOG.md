@@ -2,6 +2,13 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.3] - 2026-09-10
+### Adicionado / Modificado
+- **Favicon Oficial do Escritório (Aba do Navegador e Barra de Endereço)**:
+  - Definido como favicon oficial o ícone clássico com o templo grego / colunas romanas sobre fundo amarelo-dourado enviado pelo cliente.
+  - Gerados e otimizados os formatos padrão `favicon.ico`, `favicon-32x32.png`, `favicon-192x192.png`, `favicon-512x512.png` e `apple-touch-icon.png` dentro de `hello-elementor/assets/images/` e na raiz do site.
+  - Injetadas meta tags com mecanismo anti-cache dinâmico (`?v=timestamp`) para atualização imediata no Google Chrome, navegadores mobile e desktop.
+
 ## [3.4.2] - 2026-09-10
 ### Adicionado
 - **Tipografia Nobre da Marca ao Lado da Logo (Header e Footer)**:

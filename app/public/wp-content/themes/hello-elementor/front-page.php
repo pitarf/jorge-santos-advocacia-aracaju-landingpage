@@ -15,7 +15,9 @@ $post_id = get_the_ID();
 // Identidade Visual & Branding (Dinâmicos via Metabox ou Jorge Santos SEO)
 $header_logo = get_post_meta( $post_id, 'jsa_header_logo', true ) ?: get_option( 'jsa_header_logo', get_template_directory_uri() . '/assets/images/logo_jfs_quadrada_nobre.jpg' );
 $footer_logo = get_post_meta( $post_id, 'jsa_footer_logo', true ) ?: get_option( 'jsa_footer_logo', get_template_directory_uri() . '/assets/images/logo_jfs_quadrada_nobre.jpg' );
-$custom_favicon = get_post_meta( $post_id, 'jsa_custom_favicon', true ) ?: get_option( 'jsa_custom_favicon', home_url( '/wp-content/uploads/2026/08/cropped-logo-1-1-32x32.jpeg' ) );
+$custom_favicon = get_post_meta( $post_id, 'jsa_custom_favicon', true ) ?: get_option( 'jsa_custom_favicon', get_template_directory_uri() . '/assets/images/favicon-32x32.png' );
+$custom_favicon_192 = get_template_directory_uri() . '/assets/images/favicon-192x192.png';
+$custom_apple_icon = get_template_directory_uri() . '/assets/images/apple-touch-icon.png';
 
 // Dados Dinâmicos da Página - Padrão Aracaju / SE
 $hero_badge = get_post_meta( $post_id, 'jsa_hero_badge', true ) ?: 'Advocacia Especializada em Aracaju - SE';
@@ -57,8 +59,8 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
     
     <!-- Favicon Oficial JS Dourado (Dinâmico & Anti-Cache) -->
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( $custom_favicon . ( strpos( $custom_favicon, '?' ) === false ? '?v=' . time() : '' ) ); ?>">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo esc_url( $custom_favicon . ( strpos( $custom_favicon, '?' ) === false ? '?v=' . time() : '' ) ); ?>">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( $custom_favicon . ( strpos( $custom_favicon, '?' ) === false ? '?v=' . time() : '' ) ); ?>">
+    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo esc_url( $custom_favicon_192 . ( strpos( $custom_favicon_192, '?' ) === false ? '?v=' . time() : '' ) ); ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( $custom_apple_icon . ( strpos( $custom_apple_icon, '?' ) === false ? '?v=' . time() : '' ) ); ?>">
     <link rel="shortcut icon" href="<?php echo esc_url( $custom_favicon . ( strpos( $custom_favicon, '?' ) === false ? '?v=' . time() : '' ) ); ?>">
 
     <!-- Core Web Vitals: Preload da Imagem LCP (Hero) -->

@@ -284,8 +284,8 @@ function jsa_inject_seo_head() {
     // Resoluções Dinâmicas e Inteligentes
     $current_url = jsa_get_site_url( '/' );
     $og_image = jsa_get_og_image_url();
-    $custom_favicon = get_option( 'jsa_custom_favicon' ) ?: ( function_exists( 'get_site_icon_url' ) && get_site_icon_url( 32 ) ? get_site_icon_url( 32 ) : jsa_get_site_url( '/wp-content/uploads/2026/08/cropped-logo-1-1-32x32.jpeg' ) );
-    $custom_favicon_large = get_option( 'jsa_custom_favicon' ) ?: ( function_exists( 'get_site_icon_url' ) && get_site_icon_url( 192 ) ? get_site_icon_url( 192 ) : jsa_get_site_url( '/wp-content/uploads/2026/08/cropped-logo-1-1-192x192.jpeg' ) );
+    $custom_favicon = get_option( 'jsa_custom_favicon' ) ?: ( function_exists( 'get_site_icon_url' ) && get_site_icon_url( 32 ) ? get_site_icon_url( 32 ) : jsa_get_site_url( '/wp-content/themes/hello-elementor/assets/images/favicon-32x32.png' ) );
+    $custom_favicon_large = get_option( 'jsa_custom_favicon' ) ?: ( function_exists( 'get_site_icon_url' ) && get_site_icon_url( 192 ) ? get_site_icon_url( 192 ) : jsa_get_site_url( '/wp-content/themes/hello-elementor/assets/images/favicon-192x192.png' ) );
 
     // FAQ items para Schema JSON-LD
     $post_id = get_option( 'page_on_front' ) ?: 14;
