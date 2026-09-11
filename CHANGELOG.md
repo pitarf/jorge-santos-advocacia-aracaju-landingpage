@@ -2,6 +2,12 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.5] - 2026-09-11
+### Modificado
+- **Atualização Tipográfica da Marca na Navbar e Rodapé (Libre Baskerville)**:
+  - Integrada a fonte serifada clássica **Libre Baskerville** (`Google Fonts`) ao tema e ao Tailwind.
+  - Aplicada na assinatura textual da marca (**Jorge Santos Advocacia**) no Header e no Footer, seguindo exatamente o peso, proporção e elegância visual solicitados pelo cliente.
+
 ## [3.4.4] - 2026-09-10
 ### Modificado
 - **Ajuste de Redação na Faixa de Destaques**:

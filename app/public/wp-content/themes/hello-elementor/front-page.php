@@ -66,10 +66,10 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
     <!-- Core Web Vitals: Preload da Imagem LCP (Hero) -->
     <link rel="preload" as="image" href="<?php echo esc_url( $hero_image ); ?>" fetchpriority="high">
 
-    <!-- Google Fonts: Plus Jakarta Sans & Cinzel / Playfair com font-display: swap -->
+    <!-- Google Fonts: Plus Jakarta Sans, Cinzel, Playfair & Libre Baskerville com font-display: swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- AOS (Animate On Scroll) CSS -->
@@ -101,6 +101,7 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         serif: ['"Cinzel"', '"Playfair Display"', 'serif'],
+                        baskerville: ['"Libre Baskerville"', 'serif'],
                     }
                 }
             }
@@ -291,9 +292,9 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                 <!-- LOGOMARCA OFICIAL ARACAJU -->
                 <a href="#" class="flex items-center gap-2.5 sm:gap-3 shrink min-w-0 group">
                     <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 max-h-12 sm:max-h-14 md:max-h-16 max-w-12 sm:max-w-14 md:max-w-16 shrink-0 object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105" style="width: 50px !important; height: 50px !important; max-width: 50px !important; max-height: 50px !important; object-fit: contain !important;">
-                    <div class="flex flex-col justify-center shrink min-w-0">
-                        <span class="font-serif text-base sm:text-lg md:text-xl font-bold tracking-tight text-brand-navy leading-none whitespace-nowrap">Jorge Santos</span>
-                        <span class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-brand-goldDark mt-1 whitespace-nowrap">Advocacia</span>
+                    <div class="flex flex-col justify-center shrink min-w-0 font-baskerville">
+                        <span class="text-base sm:text-lg md:text-xl font-bold tracking-normal text-brand-navy leading-tight whitespace-nowrap">Jorge Santos</span>
+                        <span class="text-xs sm:text-sm font-normal tracking-normal text-brand-navy leading-tight whitespace-nowrap">Advocacia</span>
                     </div>
                 </a>
 
@@ -904,9 +905,9 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
                         <img src="<?php echo esc_url( $footer_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia" loading="lazy" class="h-12 w-auto max-w-[50px] bg-brand-navy p-1 rounded-lg border border-brand-gold/30">
-                        <div class="flex flex-col justify-center">
-                            <span class="font-serif text-lg font-bold tracking-tight text-white leading-none">Jorge Santos</span>
-                            <span class="text-[10px] font-semibold tracking-widest uppercase text-brand-gold mt-0.5">Advocacia</span>
+                        <div class="flex flex-col justify-center font-baskerville">
+                            <span class="text-lg font-bold tracking-normal text-white leading-tight">Jorge Santos</span>
+                            <span class="text-xs font-normal tracking-normal text-brand-gold leading-tight">Advocacia</span>
                         </div>
                     </div>
                     <p class="text-xs leading-relaxed text-slate-300">

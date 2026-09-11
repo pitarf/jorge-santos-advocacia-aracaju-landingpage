@@ -522,6 +522,20 @@ function jsa_inject_seo_head() {
 add_action( 'wp_head', 'jsa_inject_seo_head', 1 );
 
 /**
+ * Filtro Global para garantir que qualquer chamada nativa a get_site_icon_url
+ * retorne o novo Favicon Oficial do Templo/Colunas Dourado
+ */
+add_filter( 'get_site_icon_url', function( $url, $size, $blog_id ) {
+    if ( $size >= 180 ) {
+        return jsa_get_site_url( '/wp-content/themes/hello-elementor/assets/images/favicon-192x192.png' );
+    }
+    return jsa_get_site_url( '/wp-content/themes/hello-elementor/assets/images/favicon-32x32.png' );
+}, 999, 3 );
+
+// Remove tags nativas de site icon do core do WP para evitar duplicatas antigas
+remove_action( 'wp_head', 'wp_site_icon', 99 );
+
+/**
  * 5. Garante a geração de robots.txt com link dinâmico para sitemap.xml
  */
 function jsa_custom_robots_txt( $output, $public ) {
