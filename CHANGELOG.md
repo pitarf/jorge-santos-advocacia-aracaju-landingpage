@@ -2,6 +2,17 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.8] - 2026-09-11
+### Modificado
+- **Otimização de Conteúdo: Chamadas Curtas nas Áreas de Atuação**:
+  - Textos descritivos dos 6 cards substituídos por chamadas curtas, diretas e de alto impacto:
+    - **Direito Trabalhista:** *Demissões, verbas, rescisão, horas extras e defesa empresarial*
+    - **Divórcio e Família:** *Divórcio, guarda, alimentos, união estável e partilha*
+    - **Direito Imobiliário:** *Compra e venda, distrato, atraso de obras, usucapião e locação*
+    - **Direito Empresarial:** *Contratos, cobrança, prevenção de riscos e conflitos societários*
+    - **Inventário e Herança:** *Inventário judicial e extrajudicial, partilha e sucessões*
+    - **Erro Médico, Saúde e Estética:** *Falhas médicas, odontológicas, procedimentos estéticos e planos de saúde*
+
 ## [3.4.7] - 2026-09-11
 ### Modificado
 - **Padronização dos Cards e Botões de Áreas de Atuação**:

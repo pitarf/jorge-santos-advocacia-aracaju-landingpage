@@ -576,6 +576,24 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     'medico'      => 'ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU',
                 ];
 
+                // Dicionário de chamadas curtas solicitado pelo cliente
+                $descriptions_map = [
+                    'trabalhista' => 'Demissões, verbas, rescisão, horas extras e defesa empresarial',
+                    'divórcio'    => 'Divórcio, guarda, alimentos, união estável e partilha',
+                    'divorcio'    => 'Divórcio, guarda, alimentos, união estável e partilha',
+                    'família'     => 'Divórcio, guarda, alimentos, união estável e partilha',
+                    'familia'     => 'Divórcio, guarda, alimentos, união estável e partilha',
+                    'imobiliário' => 'Compra e venda, distrato, atraso de obras, usucapião e locação',
+                    'imobiliario' => 'Compra e venda, distrato, atraso de obras, usucapião e locação',
+                    'empresarial' => 'Contratos, cobrança, prevenção de riscos e conflitos societários',
+                    'inventário'  => 'Inventário judicial e extrajudicial, partilha e sucessões',
+                    'inventario'  => 'Inventário judicial e extrajudicial, partilha e sucessões',
+                    'herança'     => 'Inventário judicial e extrajudicial, partilha e sucessões',
+                    'heranca'     => 'Inventário judicial e extrajudicial, partilha e sucessões',
+                    'médico'      => 'Falhas médicas, odontológicas, procedimentos estéticos e planos de saúde',
+                    'medico'      => 'Falhas médicas, odontológicas, procedimentos estéticos e planos de saúde',
+                ];
+
                 foreach ( $saved_areas as $idx => $area_item ) :
                     $a_title = $area_item['title'] ?? '';
                     $a_subtitle = $area_item['subtitle'] ?? '';
@@ -589,6 +607,14 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     }
 
                     $a_desc = $area_item['desc'] ?? '';
+                    // Padroniza descrição curta caso o banco de dados ainda contenha o texto antigo
+                    foreach ( $descriptions_map as $needle => $official_desc ) {
+                        if ( stripos( $a_title, $needle ) !== false || stripos( $a_subtitle, $needle ) !== false ) {
+                            $a_desc = $official_desc;
+                            break;
+                        }
+                    }
+
                     $a_link = ! empty( $area_item['link'] ) ? $area_item['link'] : 'https://wa.me/5579999202205';
                     $a_icon = ! empty( $area_item['icon'] ) ? $area_item['icon'] : 'fa-scale-balanced';
                     $delay = 100 * (($idx % 3) + 1);
