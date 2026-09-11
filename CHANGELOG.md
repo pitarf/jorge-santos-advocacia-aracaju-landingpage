@@ -2,6 +2,17 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.6] - 2026-09-11
+### Adicionado
+- **Nova Área de Atuação: Erro Médico, Saúde e Estética**:
+  - Adicionado novo card de especialidade na grade de "Como Podemos Ajudar" com selo de destaque dourado:
+    - **Título:** *Erro Médico, Saúde e Estética*
+    - **Subtítulo:** *ERRO MÉDICO E INDENIZAÇÃO EM ARACAJU*
+    - **Descrição:** *Orientação jurídica em casos de erro médico e odontológico, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico, hospitais, clínicas e negativa de plano de saúde.*
+    - **Ícone:** `fa-user-doctor` e CTA direto com mensagem personalizada para o WhatsApp oficial.
+  - Integrado no painel administrativo editável (**Metaboxes**) e no catálogo Schema.org LegalService para indexação no Google.
+  - Incluído na listagem de atuação do rodapé.
+
 ## [3.4.5] - 2026-09-11
 ### Modificado
 - **Atualização Tipográfica da Marca na Navbar e Rodapé (Libre Baskerville)**:

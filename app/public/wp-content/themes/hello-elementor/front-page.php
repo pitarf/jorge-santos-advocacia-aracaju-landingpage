@@ -575,6 +575,14 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                                 'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+sobre+Invent%C3%A1rio+em+Aracaju.',
                                 'icon' => 'fa-landmark',
                                 'featured' => '0'
+                            ],
+                            [
+                                'title' => 'Erro Médico, Saúde e Estética',
+                                'subtitle' => 'ERRO MÉDICO E INDENIZAÇÃO EM ARACAJU',
+                                'desc' => 'Orientação jurídica em casos de erro médico e odontológico, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico, hospitais, clínicas e negativa de plano de saúde.',
+                                'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica+sobre+Erro+M%C3%A9dico+ou+Sa%C3%BAde+em+Aracaju.',
+                                'icon' => 'fa-user-doctor',
+                                'featured' => '1'
                             ]
                         ];
                     }
@@ -948,6 +956,7 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                         <li>Direito Imobiliário em Aracaju</li>
                         <li>Assessoria Empresarial em Aracaju</li>
                         <li>Inventário Judicial e Extrajudicial</li>
+                        <li>Erro Médico, Saúde e Estética</li>
                         <li>Contratos e Prevenção Jurídica</li>
                     </ul>
                 </div>
