@@ -538,15 +538,15 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                         $saved_areas = [
                             [
                                 'title' => 'Direito Trabalhista',
-                                'subtitle' => 'Trabalhadores e Empresas em Aracaju',
+                                'subtitle' => 'DIREITO TRABALHISTA EM ARACAJU',
                                 'desc' => 'Demissão sem justa causa, justa causa, rescisão indireta, verbas rescisórias, horas extras, FGTS, adicionais de insalubridade e periculosidade, assédio moral e defesa empresarial.',
                                 'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+atendimento+em+Direito+Trabalhista+em+Aracaju.',
                                 'icon' => 'fa-briefcase',
                                 'featured' => '1'
                             ],
                             [
-                                'title' => 'Advogado para Divórcio',
-                                'subtitle' => 'Com Bens, Filhos ou Consensual',
+                                'title' => 'Divórcio e Família',
+                                'subtitle' => 'DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU',
                                 'desc' => 'Divórcio consensual e litigioso, partilha de bens (imóveis, veículos, quotas empresariais), guarda dos filhos, pensão alimentícia, regulamentação de convivência e união estável.',
                                 'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+atendimento+para+Div%C3%B3rcio+em+Aracaju.',
                                 'icon' => 'fa-people-roof',
@@ -554,31 +554,31 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                             ],
                             [
                                 'title' => 'Direito Imobiliário',
-                                'subtitle' => 'Compra, Venda e Regularização',
-                                'desc' => 'Contratos imobiliários, regularização de imóvel sem escritura, usucapião, adjudicação compulsória, distrato imobiliário, imóveis na planta, atraso de entrega e locação.',
+                                'subtitle' => 'ADVOGADO IMOBILIÁRIO EM ARACAJU',
+                                'desc' => 'Compra e venda de imóveis, regularização, usucapião, distrato imobiliário, atraso de obras, loteamentos, despejo e locação.',
                                 'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+em+Direito+Imobili%C3%A1rio+em+Aracaju.',
                                 'icon' => 'fa-house-chimney',
-                                'featured' => '0'
+                                'featured' => '1'
                             ],
                             [
-                                'title' => 'Advogado Empresarial',
-                                'subtitle' => 'Assessoria Jurídica em Aracaju',
-                                'desc' => 'Elaboração e revisão de contratos, cobrança e recuperação de créditos, execução de dívidas, negociação, conflitos entre sócios e consultoria preventiva contínua.',
+                                'title' => 'Direito Empresarial',
+                                'subtitle' => 'DIREITO EMPRESARIAL EM ARACAJU',
+                                'desc' => 'Elaboração e revisão de contratos, recuperação de crédito, cobranças, resolução de conflitos entre sócios e consultoria jurídica preventiva.',
                                 'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+gostaria+de+assessoria+jur%C3%ADdica+empresarial+em+Aracaju.',
                                 'icon' => 'fa-building-shield',
                                 'featured' => '1'
                             ],
                             [
-                                'title' => 'Advogado para Inventário',
-                                'subtitle' => 'Judicial e Extrajudicial em Cartório',
-                                'desc' => 'Regularização e partilha segura de herança, imóveis, veículos, contas bancárias, empresas, direitos dos herdeiros, meação, testamentos e resolução de conflitos sucessórios.',
+                                'title' => 'Inventário e Herança',
+                                'subtitle' => 'INVENTÁRIO E HERANÇA EM ARACAJU',
+                                'desc' => 'Regularização de bens deixados por falecimento, partilha correta de herança, imóveis, veículos, contas bancárias e direitos sucessórios.',
                                 'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+sobre+Invent%C3%A1rio+em+Aracaju.',
                                 'icon' => 'fa-landmark',
-                                'featured' => '0'
+                                'featured' => '1'
                             ],
                             [
                                 'title' => 'Erro Médico, Saúde e Estética',
-                                'subtitle' => 'ERRO MÉDICO E INDENIZAÇÃO EM ARACAJU',
+                                'subtitle' => 'ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU',
                                 'desc' => 'Orientação jurídica em casos de erro médico e odontológico, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico, hospitais, clínicas e negativa de plano de saúde.',
                                 'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica+sobre+Erro+M%C3%A9dico+ou+Sa%C3%BAde+em+Aracaju.',
                                 'icon' => 'fa-user-doctor',
@@ -594,14 +594,9 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     $a_desc = $area_item['desc'] ?? '';
                     $a_link = ! empty( $area_item['link'] ) ? $area_item['link'] : 'https://wa.me/5579999202205';
                     $a_icon = ! empty( $area_item['icon'] ) ? $area_item['icon'] : 'fa-scale-balanced';
-                    $is_featured = ( isset( $area_item['featured'] ) && $area_item['featured'] === '1' );
                     $delay = 100 * (($idx % 3) + 1);
                 ?>
-                    <div class="<?php echo $is_featured ? 'bg-white border-2 border-brand-gold shadow-lg relative' : 'bg-brand-bgLight border border-slate-200 shadow-sm'; ?> card-hover-effect rounded-2xl p-7 flex flex-col justify-between transition-all" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
-                        <?php if ( $is_featured ) : ?>
-                            <span class="absolute -top-3 right-6 gold-gradient-bg text-brand-navy text-[10px] font-extrabold uppercase px-3 py-1 rounded-full shadow-sm">Destaque</span>
-                        <?php endif; ?>
-
+                    <div class="bg-white border-2 border-brand-gold shadow-lg card-hover-effect rounded-2xl p-7 flex flex-col justify-between transition-all" data-aos="fade-up" data-aos-delay="<?php echo $delay; ?>">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <h3 class="text-xl font-bold text-brand-navy"><?php echo esc_html( $a_title ); ?></h3>
@@ -612,8 +607,8 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                             <?php endif; ?>
                             <p class="text-slate-600 text-sm mb-4 leading-relaxed"><?php echo esc_html( $a_desc ); ?></p>
                         </div>
-                        <a href="<?php echo esc_url( $a_link ); ?>" target="_blank" class="mt-6 block text-center py-3 px-4 rounded-lg <?php echo $is_featured ? 'gold-gradient-bg text-brand-navy font-extrabold hover:brightness-105 shadow-sm' : 'border-2 border-brand-gold text-brand-goldDark hover:bg-brand-gold hover:text-white font-bold'; ?> text-xs transition-all transform hover:scale-105">
-                            Falar com Especialista
+                        <a href="<?php echo esc_url( $a_link ); ?>" target="_blank" class="mt-6 block text-center py-3.5 px-4 rounded-xl gold-gradient-bg text-brand-navy font-extrabold hover:brightness-105 shadow-md text-xs sm:text-sm tracking-wide transition-all transform hover:scale-105">
+                            Falar com Advogado
                         </a>
                     </div>
                 <?php endforeach; ?>

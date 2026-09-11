@@ -269,7 +269,7 @@ function jsa_get_default_areas() {
     return [
         [
             'title' => 'Direito Trabalhista',
-            'subtitle' => 'Trabalhadores e Empresas em Aracaju',
+            'subtitle' => 'DIREITO TRABALHISTA EM ARACAJU',
             'desc' => 'Atuação em demissões, rescisão indireta, horas extras, verbas rescisórias, insalubridade, acidente de trabalho e assessoria preventiva para empresas.',
             'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+atendimento+em+Direito+Trabalhista+em+Aracaju.',
             'icon' => 'fa-briefcase',
@@ -277,7 +277,7 @@ function jsa_get_default_areas() {
         ],
         [
             'title' => 'Divórcio e Família',
-            'subtitle' => 'Consensual, Litigioso e Partilha',
+            'subtitle' => 'DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU',
             'desc' => 'Segurança e agilidade em divórcios com ou sem bens, pensão alimentícia, guarda dos filhos, convivência familiar e reconhecimento de união estável.',
             'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+atendimento+para+Div%C3%B3rcio+em+Aracaju.',
             'icon' => 'fa-people-roof',
@@ -285,15 +285,15 @@ function jsa_get_default_areas() {
         ],
         [
             'title' => 'Direito Imobiliário',
-            'subtitle' => 'Contratos, Regularização e Imóveis',
+            'subtitle' => 'ADVOGADO IMOBILIÁRIO EM ARACAJU',
             'desc' => 'Compra e venda de imóveis, regularização, usucapião, distrato imobiliário, atraso de obras, loteamentos, despejo e locação.',
             'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+em+Direito+Imobili%C3%A1rio+em+Aracaju.',
             'icon' => 'fa-house-chimney',
-            'featured' => '0'
+            'featured' => '1'
         ],
         [
             'title' => 'Direito Empresarial',
-            'subtitle' => 'Prevenção de Riscos e Contratos',
+            'subtitle' => 'DIREITO EMPRESARIAL EM ARACAJU',
             'desc' => 'Elaboração e revisão de contratos, recuperação de crédito, cobranças, resolução de conflitos entre sócios e consultoria jurídica preventiva.',
             'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+gostaria+de+assessoria+jur%C3%ADdica+empresarial+em+Aracaju.',
             'icon' => 'fa-building-shield',
@@ -301,15 +301,15 @@ function jsa_get_default_areas() {
         ],
         [
             'title' => 'Inventário e Herança',
-            'subtitle' => 'Judicial e Extrajudicial em Cartório',
+            'subtitle' => 'INVENTÁRIO E HERANÇA EM ARACAJU',
             'desc' => 'Regularização de bens deixados por falecimento, partilha correta de herança, imóveis, veículos, contas bancárias e direitos sucessórios.',
             'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+sobre+Invent%C3%A1rio+em+Aracaju.',
             'icon' => 'fa-landmark',
-            'featured' => '0'
+            'featured' => '1'
         ],
         [
             'title' => 'Erro Médico, Saúde e Estética',
-            'subtitle' => 'ERRO MÉDICO E INDENIZAÇÃO EM ARACAJU',
+            'subtitle' => 'ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU',
             'desc' => 'Orientação jurídica em casos de erro médico e odontológico, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico, hospitais, clínicas e negativa de plano de saúde.',
             'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica+sobre+Erro+M%C3%A9dico+ou+Sa%C3%BAde+em+Aracaju.',
             'icon' => 'fa-user-doctor',

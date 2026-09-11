@@ -2,6 +2,20 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.7] - 2026-09-11
+### Modificado
+- **Padronização dos Cards e Botões de Áreas de Atuação**:
+  - Subtítulos atualizados e padronizados em caixa alta para todas as 6 áreas:
+    - `DIREITO TRABALHISTA EM ARACAJU`
+    - `DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU`
+    - `ADVOGADO IMOBILIÁRIO EM ARACAJU`
+    - `DIREITO EMPRESARIAL EM ARACAJU`
+    - `INVENTÁRIO E HERANÇA EM ARACAJU`
+    - `ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU`
+  - Todos os botões dos cards foram padronizados com o estilo dourado premium (`gold-gradient-bg`) com texto escuro Navy e efeito de hover uniforme.
+  - Alterado o texto de todos os botões de *"Falar com Especialista"* para **"Falar com Advogado"**.
+  - Todos os 6 cards alinhados com a mesma moldura e estética nobre.
+
 ## [3.4.6] - 2026-09-11
 ### Adicionado
 - **Nova Área de Atuação: Erro Médico, Saúde e Estética**:
