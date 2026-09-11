@@ -461,6 +461,14 @@ function jsa_inject_seo_head() {
               "name": "Advogado para Erro Médico, Saúde e Estética em Aracaju",
               "description": "Orientação jurídica em casos de erro médico e odontológico, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico e negativa de plano de saúde."
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Outras Áreas do Direito em Aracaju",
+              "description": "Assessoria e representação jurídica em Direito do Consumidor, Responsabilidade Civil, Indenizações, Previdenciário, Agrário, Ambiental, Cobranças, Contratos e Direito Associativo."
+            }
           }
         ]
       }

@@ -637,6 +637,40 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                 <?php endforeach; ?>
 
             </div>
+
+            <!-- OUTRAS ÁREAS DE ATUAÇÃO -->
+            <div class="mt-14 pt-10 border-t border-slate-200 text-center" data-aos="fade-up" data-aos-duration="600">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-300 text-brand-navy text-xs font-extrabold uppercase tracking-wider mb-4">
+                    <i class="fa-solid fa-scale-unbalanced-flip text-brand-gold"></i>
+                    <span>Demais Especialidades</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-navy mb-4">Outras áreas de atuação</h3>
+                <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-y-3 gap-x-2 sm:gap-x-3 text-sm sm:text-base font-semibold text-slate-700 leading-relaxed">
+                    <span class="hover:text-brand-goldDark transition-colors">Direito do Consumidor</span>
+                    <span class="text-brand-gold font-black select-none">•</span>
+                    <span class="hover:text-brand-goldDark transition-colors">Responsabilidade Civil e Indenizações</span>
+                    <span class="text-brand-gold font-black select-none">•</span>
+                    <span class="hover:text-brand-goldDark transition-colors">Direito Previdenciário</span>
+                    <span class="text-brand-gold font-black select-none">•</span>
+                    <span class="hover:text-brand-goldDark transition-colors">Direito Agrário e Ambiental</span>
+                    <span class="text-brand-gold font-black select-none">•</span>
+                    <span class="hover:text-brand-goldDark transition-colors">Cobranças e Execuções</span>
+                    <span class="text-brand-gold font-black select-none">•</span>
+                    <span class="hover:text-brand-goldDark transition-colors">Contratos</span>
+                    <span class="text-brand-gold font-black select-none">•</span>
+                    <span class="hover:text-brand-goldDark transition-colors">Direito Associativo</span>
+                </div>
+                <p class="mt-4 text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto">
+                    Não encontrou sua demanda nas áreas principais? Entre em contato para avaliarmos seu caso com nossa equipe jurídica.
+                </p>
+                <div class="mt-6">
+                    <a href="<?php echo esc_url( $hero_cta_link ); ?>" target="_blank" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-brand-navy hover:text-brand-goldDark bg-slate-100 hover:bg-amber-50 border border-slate-300 hover:border-brand-gold/50 px-5 py-2.5 rounded-xl transition-all shadow-sm hover:shadow">
+                        <i class="fa-brands fa-whatsapp text-accent-green text-base"></i>
+                        <span>Consultar sobre outra área no WhatsApp</span>
+                        <i class="fa-solid fa-arrow-right text-xs text-brand-gold"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -975,6 +1009,7 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                         <li>Assessoria Empresarial em Aracaju</li>
                         <li>Inventário Judicial e Extrajudicial</li>
                         <li>Erro Médico, Saúde e Estética</li>
+                        <li>Consumidor, Previdenciário e Indenizações</li>
                         <li>Contratos e Prevenção Jurídica</li>
                     </ul>
                 </div>

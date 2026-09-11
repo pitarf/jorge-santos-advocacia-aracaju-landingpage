@@ -2,6 +2,15 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.4.9] - 2026-09-11
+### Adicionado
+- **Seção "Outras áreas de atuação" na Landing Page**:
+  - Implementado bloco nobre e responsivo logo abaixo dos 6 cards de atuação em `front-page.php`.
+  - Exibição elegante com separadores dourados dos seguintes ramos do Direito:
+    - *Direito do Consumidor • Responsabilidade Civil e Indenizações • Direito Previdenciário • Direito Agrário e Ambiental • Cobranças e Execuções • Contratos • Direito Associativo*
+  - Botão/Link direto para o WhatsApp permitindo que clientes com demandas nessas áreas consultem a equipe rapidamente.
+  - Atualização do Schema.org `LegalService` (`jorge-santos-seo.php`) e da lista de especialidades do rodapé.
+
 ## [3.4.8] - 2026-09-11
 ### Modificado
 - **Otimização de Conteúdo: Chamadas Curtas nas Áreas de Atuação**:
