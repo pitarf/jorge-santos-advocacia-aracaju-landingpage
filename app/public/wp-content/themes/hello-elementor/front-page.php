@@ -535,62 +535,59 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     if ( function_exists( 'jsa_get_default_areas' ) ) {
                         $saved_areas = jsa_get_default_areas();
                     } else {
-                        $saved_areas = [
-                            [
-                                'title' => 'Direito Trabalhista',
-                                'subtitle' => 'DIREITO TRABALHISTA EM ARACAJU',
-                                'desc' => 'Demissão sem justa causa, justa causa, rescisão indireta, verbas rescisórias, horas extras, FGTS, adicionais de insalubridade e periculosidade, assédio moral e defesa empresarial.',
-                                'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+atendimento+em+Direito+Trabalhista+em+Aracaju.',
-                                'icon' => 'fa-briefcase',
-                                'featured' => '1'
-                            ],
-                            [
-                                'title' => 'Divórcio e Família',
-                                'subtitle' => 'DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU',
-                                'desc' => 'Divórcio consensual e litigioso, partilha de bens (imóveis, veículos, quotas empresariais), guarda dos filhos, pensão alimentícia, regulamentação de convivência e união estável.',
-                                'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+atendimento+para+Div%C3%B3rcio+em+Aracaju.',
-                                'icon' => 'fa-people-roof',
-                                'featured' => '1'
-                            ],
-                            [
-                                'title' => 'Direito Imobiliário',
-                                'subtitle' => 'ADVOGADO IMOBILIÁRIO EM ARACAJU',
-                                'desc' => 'Compra e venda de imóveis, regularização, usucapião, distrato imobiliário, atraso de obras, loteamentos, despejo e locação.',
-                                'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+em+Direito+Imobili%C3%A1rio+em+Aracaju.',
-                                'icon' => 'fa-house-chimney',
-                                'featured' => '1'
-                            ],
-                            [
-                                'title' => 'Direito Empresarial',
-                                'subtitle' => 'DIREITO EMPRESARIAL EM ARACAJU',
-                                'desc' => 'Elaboração e revisão de contratos, recuperação de crédito, cobranças, resolução de conflitos entre sócios e consultoria jurídica preventiva.',
-                                'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+gostaria+de+assessoria+jur%C3%ADdica+empresarial+em+Aracaju.',
-                                'icon' => 'fa-building-shield',
-                                'featured' => '1'
-                            ],
-                            [
-                                'title' => 'Inventário e Herança',
-                                'subtitle' => 'INVENTÁRIO E HERANÇA EM ARACAJU',
-                                'desc' => 'Regularização de bens deixados por falecimento, partilha correta de herança, imóveis, veículos, contas bancárias e direitos sucessórios.',
-                                'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+sobre+Invent%C3%A1rio+em+Aracaju.',
-                                'icon' => 'fa-landmark',
-                                'featured' => '1'
-                            ],
-                            [
-                                'title' => 'Erro Médico, Saúde e Estética',
-                                'subtitle' => 'ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU',
-                                'desc' => 'Orientação jurídica em casos de erro médico e odontológico, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico, hospitais, clínicas e negativa de plano de saúde.',
-                                'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica+sobre+Erro+M%C3%A9dico+ou+Sa%C3%BAde+em+Aracaju.',
-                                'icon' => 'fa-user-doctor',
-                                'featured' => '1'
-                            ]
-                        ];
+                        $saved_areas = [];
                     }
                 }
+
+                // Garante que a 6ª área (Erro Médico) sempre esteja presente se faltar
+                $has_medico = false;
+                foreach ( $saved_areas as $k => $sa ) {
+                    if ( stripos( $sa['title'] ?? '', 'médico' ) !== false || stripos( $sa['title'] ?? '', 'medico' ) !== false ) {
+                        $has_medico = true;
+                        break;
+                    }
+                }
+                if ( ! $has_medico ) {
+                    $saved_areas[] = [
+                        'title' => 'Erro Médico, Saúde e Estética',
+                        'subtitle' => 'ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU',
+                        'desc' => 'Orientação jurídica em casos de erro médico e odontológico, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico, hospitais, clínicas e negativa de plano de saúde.',
+                        'link' => 'https://wa.me/5579999202205?text=Ol%C3%A1%2C+preciso+de+orienta%C3%A7%C3%A3o+jur%C3%ADdica+sobre+Erro+M%C3%A9dico+ou+Sa%C3%BAde+em+Aracaju.',
+                        'icon' => 'fa-user-doctor',
+                        'featured' => '1'
+                    ];
+                }
+
+                // Dicionário de padronização oficial de subtítulos solicitado pelo cliente
+                $subtitles_map = [
+                    'trabalhista' => 'DIREITO TRABALHISTA EM ARACAJU',
+                    'divórcio'    => 'DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU',
+                    'divorcio'    => 'DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU',
+                    'família'     => 'DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU',
+                    'familia'     => 'DIVÓRCIO E DIREITO DE FAMÍLIA EM ARACAJU',
+                    'imobiliário' => 'ADVOGADO IMOBILIÁRIO EM ARACAJU',
+                    'imobiliario' => 'ADVOGADO IMOBILIÁRIO EM ARACAJU',
+                    'empresarial' => 'DIREITO EMPRESARIAL EM ARACAJU',
+                    'inventário'  => 'INVENTÁRIO E HERANÇA EM ARACAJU',
+                    'inventario'  => 'INVENTÁRIO E HERANÇA EM ARACAJU',
+                    'herança'     => 'INVENTÁRIO E HERANÇA EM ARACAJU',
+                    'heranca'     => 'INVENTÁRIO E HERANÇA EM ARACAJU',
+                    'médico'      => 'ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU',
+                    'medico'      => 'ERRO MÉDICO, SAÚDE E ESTÉTICA EM ARACAJU',
+                ];
 
                 foreach ( $saved_areas as $idx => $area_item ) :
                     $a_title = $area_item['title'] ?? '';
                     $a_subtitle = $area_item['subtitle'] ?? '';
+
+                    // Padroniza subtítulo caso o banco de dados ainda contenha o texto antigo
+                    foreach ( $subtitles_map as $needle => $official_sub ) {
+                        if ( stripos( $a_title, $needle ) !== false || stripos( $a_subtitle, $needle ) !== false ) {
+                            $a_subtitle = $official_sub;
+                            break;
+                        }
+                    }
+
                     $a_desc = $area_item['desc'] ?? '';
                     $a_link = ! empty( $area_item['link'] ) ? $area_item['link'] : 'https://wa.me/5579999202205';
                     $a_icon = ! empty( $area_item['icon'] ) ? $area_item['icon'] : 'fa-scale-balanced';
