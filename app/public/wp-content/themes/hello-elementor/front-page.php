@@ -290,11 +290,11 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- LOGOMARCA OFICIAL ARACAJU -->
-                <a href="#" class="flex items-center gap-2.5 sm:gap-3 shrink min-w-0 group">
+                <a href="#" class="flex items-center gap-3 shrink min-w-0 group">
                     <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 max-h-12 sm:max-h-14 md:max-h-16 max-w-12 sm:max-w-14 md:max-w-16 shrink-0 object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105" style="width: 50px !important; height: 50px !important; max-width: 50px !important; max-height: 50px !important; object-fit: contain !important;">
-                    <div class="flex flex-col justify-center shrink min-w-0 font-baskerville">
-                        <span class="text-base sm:text-lg md:text-xl font-bold tracking-normal text-brand-navy leading-tight whitespace-nowrap">Jorge Santos</span>
-                        <span class="text-xs sm:text-sm font-normal tracking-normal text-brand-navy leading-tight whitespace-nowrap">Advocacia</span>
+                    <div class="flex flex-col justify-center shrink min-w-0 font-serif">
+                        <span class="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wider text-brand-navy leading-tight whitespace-nowrap">Jorge Santos</span>
+                        <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.28em] text-brand-goldDark leading-tight whitespace-nowrap pl-0.5">Advocacia</span>
                     </div>
                 </a>
 
@@ -965,9 +965,9 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
                         <img src="<?php echo esc_url( $footer_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia" loading="lazy" class="h-12 w-auto max-w-[50px] bg-brand-navy p-1 rounded-lg border border-brand-gold/30">
-                        <div class="flex flex-col justify-center font-baskerville">
-                            <span class="text-lg font-bold tracking-normal text-white leading-tight">Jorge Santos</span>
-                            <span class="text-xs font-normal tracking-normal text-brand-gold leading-tight">Advocacia</span>
+                        <div class="flex flex-col justify-center font-serif">
+                            <span class="text-base sm:text-lg font-bold uppercase tracking-wider text-white leading-tight">Jorge Santos</span>
+                            <span class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.28em] text-brand-gold leading-tight pl-0.5">Advocacia</span>
                         </div>
                     </div>
                     <p class="text-xs leading-relaxed text-slate-300">

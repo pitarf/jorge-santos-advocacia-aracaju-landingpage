@@ -2,6 +2,15 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.5.0] - 2026-09-12
+### Modificado
+- **Tipografia Imponente da Marca no Header e Rodapé (Cinzel Monumental)**:
+  - Substituída a fonte serifada anterior pela **Cinzel** (fonte imperial romana baseada em inscrições de cortes e palácios de justiça).
+  - Estruturação monumental aplicada:
+    - **JORGE SANTOS:** Caixa alta com `tracking-wider`, peso bold e presença visual austera.
+    - **ADVOCACIA:** Caixa alta com `tracking-[0.28em]` lapidar em dourado nobre (`#D1A748` / `#B38B2F`), harmonizando perfeitamente com o brasão dourado 3D.
+  - Aplicada no Header (Navbar) e no Rodapé oficial.
+
 ## [3.4.9] - 2026-09-11
 ### Adicionado
 - **Seção "Outras áreas de atuação" na Landing Page**:
