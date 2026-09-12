@@ -2,6 +2,14 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.5.1] - 2026-09-12
+### Modificado
+- **Identidade Tipográfica 100% Fiel à Logomarca Oficial (Cormorant Garamond + Sans Tracking)**:
+  - Analisada a tipografia nativa presente no brasão oficial (`logo_js_quadrada.png` e `logo_jfs_horizontal.png`).
+  - Alinhamento rigoroso da tipografia da marca no Header e Rodapé:
+    - **`JORGE SANTOS`**: Tipografia nobre **Cormorant Garamond**, caixa alta com tracking `0.14em`, exatamente com as formas de letras e serifas da logo oficial do Dr. Jorge Santos.
+    - **`ADVOCACIA E ASSESSORIA JURÍDICA`**: Tipografia sem serifa geométrica com espaçamento nobre (`tracking-[0.32em]`) em dourado, idêntica ao texto de suporte da logomarca oficial.
+
 ## [3.5.0] - 2026-09-12
 ### Modificado
 - **Tipografia Imponente da Marca no Header e Rodapé (Cinzel Monumental)**:
