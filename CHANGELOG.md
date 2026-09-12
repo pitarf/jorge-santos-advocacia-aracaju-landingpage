@@ -2,6 +2,15 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.5.2] - 2026-09-12
+### Modificado
+- **Otimização de Espaçamento e Respiro da Barra de Navegação (Navbar)**:
+  - Resolvida a aglomeração visual de elementos no Header:
+    - Subtítulo da marca ajustado para a proporção nobre **`Advocacia & Consultoria`** (evitando linhas longas que empurravam o menu).
+    - Ícone da marca redimensionado com precisão óptica (`46px`), garantindo proporção áurea com o texto.
+    - Espaçamento amplo e progressivo entre os itens de menu (`gap-6 2xl:gap-8`), permitindo leitura limpa e confortável.
+    - Gatilho do menu mobile reposicionado para telas intermediárias (`xl:hidden`), assegurando que em nenhuma resolução os links fiquem colados na marca ou no botão do WhatsApp.
+
 ## [3.5.1] - 2026-09-12
 ### Modificado
 - **Identidade Tipográfica 100% Fiel à Logomarca Oficial (Cormorant Garamond + Sans Tracking)**:

@@ -291,16 +291,16 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- LOGOMARCA OFICIAL ARACAJU -->
-                <a href="#" class="flex items-center gap-3 shrink min-w-0 group">
-                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-12 sm:h-14 md:h-16 w-12 sm:w-14 md:w-16 max-h-12 sm:max-h-14 md:max-h-16 max-w-12 sm:max-w-14 md:max-w-16 shrink-0 object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105" style="width: 50px !important; height: 50px !important; max-width: 50px !important; max-height: 50px !important; object-fit: contain !important;">
-                    <div class="flex flex-col justify-center shrink min-w-0">
-                        <span class="font-garamond text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-brand-navy leading-none whitespace-nowrap">Jorge Santos</span>
-                        <span class="font-sans text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.32em] text-brand-goldDark leading-tight whitespace-nowrap pl-0.5 mt-1">Advocacia e Assessoria Jurídica</span>
+                <a href="#" class="flex items-center gap-3.5 shrink-0 group">
+                    <img src="<?php echo esc_url( $header_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia - Aracaju" class="h-11 sm:h-12 w-auto max-h-[48px] max-w-[48px] shrink-0 object-contain rounded-lg shadow-sm border border-brand-gold/30 transition-transform group-hover:scale-105" style="width: 46px !important; height: 46px !important; object-fit: contain !important;">
+                    <div class="flex flex-col justify-center shrink-0">
+                        <span class="font-garamond text-xl sm:text-[22px] font-bold uppercase tracking-[0.14em] text-brand-navy leading-none whitespace-nowrap">Jorge Santos</span>
+                        <span class="font-sans text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.32em] text-brand-goldDark leading-tight whitespace-nowrap pl-0.5 mt-1">Advocacia & Consultoria</span>
                     </div>
                 </a>
 
                 <!-- NAVEGAÇÃO DESKTOP -->
-                <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-brand-dark">
+                <nav class="hidden xl:flex items-center gap-6 2xl:gap-8 text-sm font-semibold text-brand-dark">
                     <a href="#inicio" class="hover:text-brand-goldDark transition-colors">Início</a>
                     <a href="#atendimento" class="hover:text-brand-goldDark transition-colors">Atendimento</a>
                     <a href="#areas" class="hover:text-brand-goldDark transition-colors">Como Podemos Ajudar</a>
@@ -310,7 +310,7 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                 </nav>
 
                 <!-- BOTÃO CTA HEADER -->
-                <div class="hidden sm:flex items-center gap-3">
+                <div class="hidden sm:flex items-center gap-3 shrink-0">
                     <a href="<?php echo esc_url( $hero_cta_link ); ?>" target="_blank" class="bg-accent-green hover:bg-accent-hoverGreen text-white font-bold text-sm px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2 whitespace-nowrap">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                         <span>Falar no WhatsApp</span>
@@ -318,14 +318,14 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                 </div>
 
                 <!-- MENU MOBILE TRIGGER -->
-                <button id="mobileMenuBtn" class="lg:hidden bg-white text-brand-navy hover:text-brand-gold hover:border-brand-gold border border-slate-200 p-2.5 rounded-lg text-xl shadow-sm transition-all focus:outline-none" aria-label="Abrir Menu">
+                <button id="mobileMenuBtn" class="xl:hidden bg-white text-brand-navy hover:text-brand-gold hover:border-brand-gold border border-slate-200 p-2.5 rounded-lg text-xl shadow-sm transition-all focus:outline-none" aria-label="Abrir Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
         </div>
 
         <!-- MENU MOBILE DROPDOWN -->
-        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+        <div id="mobileMenu" class="hidden xl:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
             <a href="#inicio" class="block py-2 text-brand-dark font-medium hover:text-brand-gold border-b border-slate-100">Início</a>
             <a href="#atendimento" class="block py-2 text-brand-dark font-medium hover:text-brand-gold border-b border-slate-100">Atendimento</a>
             <a href="#areas" class="block py-2 text-brand-dark font-medium hover:text-brand-gold border-b border-slate-100">Como Podemos Ajudar</a>
@@ -968,7 +968,7 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                         <img src="<?php echo esc_url( $footer_logo ); ?>" alt="Jorge Santos Advocacia e Consultoria Jurídica - Aracaju / SE" title="Jorge Santos Advocacia" loading="lazy" class="h-12 w-auto max-w-[50px] bg-brand-navy p-1 rounded-lg border border-brand-gold/30">
                         <div class="flex flex-col justify-center">
                             <span class="font-garamond text-xl sm:text-2xl font-bold uppercase tracking-[0.14em] text-white leading-none">Jorge Santos</span>
-                            <span class="font-sans text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.32em] text-brand-gold leading-tight pl-0.5 mt-1">Advocacia e Assessoria Jurídica</span>
+                            <span class="font-sans text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.32em] text-brand-gold leading-tight pl-0.5 mt-1">Advocacia & Consultoria</span>
                         </div>
                     </div>
                     <p class="text-xs leading-relaxed text-slate-300">
