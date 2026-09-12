@@ -2,6 +2,14 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.5.5] - 2026-09-12
+### Corrigido
+- **Ajuste de Quebra de Linha e Enquadramento do FAQ em Dispositivos Móveis (Zero Overflow)**:
+  - Corrigido o corte e vazamento de texto para fora do card no botão das perguntas (`.faq-toggle` e `.elementor-tab-title`).
+  - O tema base continha a regra `button { white-space: nowrap }` do CSS de reset, o que impedia que perguntas mais longas quebrassem em duas linhas na tela do celular.
+  - Aplicado `white-space: normal !important`, `word-break: break-word !important`, `overflow-wrap: break-word !important` e `flex: 1 1 auto` nos títulos de cada pergunta.
+  - Todas as perguntas agora se ajustam com precisão milimétrica dentro da moldura dos cards, independentemente da largura da tela.
+
 ## [3.5.4] - 2026-09-12
 ### Corrigido
 - **Blindagem e Especificidade do Acordeão de FAQ (Zero Rosa / 100% Navy & Gold)**:

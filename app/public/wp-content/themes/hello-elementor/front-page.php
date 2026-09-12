@@ -216,6 +216,18 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
             transition: background 0.2s ease, color 0.2s ease !important;
             border: none !important;
             outline: none !important;
+            white-space: normal !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+            text-align: left !important;
+            width: 100% !important;
+        }
+        .faq-toggle span {
+            white-space: normal !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+            flex: 1 1 auto !important;
+            display: block !important;
         }
         .faq-toggle:hover,
         .elementor-accordion .elementor-tab-title:hover,
@@ -953,11 +965,11 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     $is_first = ( $findex === 0 );
                 ?>
                     <div class="faq-item" data-aos="fade-up" data-aos-delay="<?php echo min( ($findex + 1) * 60, 400 ); ?>">
-                        <button class="faq-toggle <?php echo $is_first ? 'active-accordion' : ''; ?> w-full p-5 text-left font-bold text-sm sm:text-base flex justify-between items-center focus:outline-none">
-                            <span class="pr-3"><?php echo esc_html( $q ); ?></span>
+                        <button class="faq-toggle <?php echo $is_first ? 'active-accordion' : ''; ?> w-full p-4 sm:p-5 text-left font-bold text-sm sm:text-base flex justify-between items-center focus:outline-none whitespace-normal break-words">
+                            <span class="pr-3 flex-1 text-left whitespace-normal break-words"><?php echo esc_html( $q ); ?></span>
                             <i class="fa-solid fa-chevron-down text-brand-gold shrink-0 transition-transform duration-200"></i>
                         </button>
-                        <div class="faq-content <?php echo $is_first ? '' : 'hidden'; ?> p-5 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
+                        <div class="faq-content <?php echo $is_first ? '' : 'hidden'; ?> p-4 sm:p-5 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed whitespace-normal break-words">
                             <?php echo wp_kses_post( $a ); ?>
                         </div>
                     </div>
