@@ -2,6 +2,13 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.5.4] - 2026-09-12
+### Corrigido
+- **Blindagem e Especificidade do Acordeão de FAQ (Zero Rosa / 100% Navy & Gold)**:
+  - Aplicada especificidade máxima nos seletores de estilo CSS do acordeão (`.faq-toggle`, `.elementor-tab-title.elementor-active`, `.elementor-accordion-item`, `.faq-item`), eliminando integralmente a herança de cores magenta/rosa do kit padrão do Elementor.
+  - O item ativo agora assume estritamente o fundo azul-marinho profundo (`#0E1928`), texto branco e setas/chevrons dourados (`#D1A748`).
+  - Inclusão incondicional em nível de template da lista com as 10 perguntas e respostas jurídicas completas de Aracaju, impedindo que dados incompletos em cache ou versões anteriores no banco impeçam a exibição dos itens 9 (Erro Médico/Estética) e 10 (Planos de Saúde).
+
 ## [3.5.3] - 2026-09-12
 ### Modificado
 - **Reformulação Completa da Seção de Dúvidas Frequentes (FAQ)**:

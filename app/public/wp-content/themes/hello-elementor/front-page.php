@@ -189,37 +189,69 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
             transform: scale(1.12);
         }
 
-        .faq-item {
-            border: 1px solid #E2E8F0;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #FFFFFF;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        /* Accordion FAQ Custom & Elementor Override - Navy #0E1928 & Gold #D1A748 (Zero Rosa) */
+        .faq-item,
+        .elementor-accordion .elementor-accordion-item,
+        .elementor-toggle .elementor-toggle-item {
+            border: 1px solid #E2E8F0 !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+            background: #FFFFFF !important;
+            background-color: #FFFFFF !important;
+            margin-bottom: 12px !important;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
         }
-        .faq-item:hover {
-            border-color: #D1A748;
-            box-shadow: 0 4px 12px rgba(14, 25, 40, 0.04);
+        .faq-item:hover,
+        .elementor-accordion .elementor-accordion-item:hover,
+        .elementor-toggle .elementor-toggle-item:hover {
+            border-color: #D1A748 !important;
+            box-shadow: 0 4px 14px rgba(14, 25, 40, 0.05) !important;
         }
-        .faq-toggle {
-            background: #FFFFFF;
-            color: #0E1928;
-            transition: background 0.2s ease, color 0.2s ease;
+        .faq-toggle,
+        .elementor-accordion .elementor-tab-title,
+        .elementor-toggle .elementor-tab-title {
+            background: #FFFFFF !important;
+            background-color: #FFFFFF !important;
+            color: #0E1928 !important;
+            transition: background 0.2s ease, color 0.2s ease !important;
+            border: none !important;
+            outline: none !important;
         }
-        .faq-toggle:hover {
-            background: #FAFBFD;
-            color: #D1A748;
+        .faq-toggle:hover,
+        .elementor-accordion .elementor-tab-title:hover,
+        .elementor-toggle .elementor-tab-title:hover {
+            background: #FAFBFD !important;
+            background-color: #FAFBFD !important;
+            color: #D1A748 !important;
         }
-        .faq-toggle.active-accordion {
+        .faq-toggle.active-accordion,
+        .faq-toggle.active-accordion:hover,
+        .faq-toggle.active-accordion:focus,
+        .elementor-accordion .elementor-tab-title.elementor-active,
+        .elementor-toggle .elementor-tab-title.elementor-active {
             background: #0E1928 !important;
+            background-color: #0E1928 !important;
             color: #FFFFFF !important;
+            border-color: #0E1928 !important;
+        }
+        .faq-toggle i,
+        .elementor-accordion .elementor-accordion-icon,
+        .elementor-toggle .elementor-toggle-icon {
+            color: #D1A748 !important;
+            fill: #D1A748 !important;
+            transition: transform 0.2s ease !important;
         }
         .faq-toggle.active-accordion i {
             color: #D1A748 !important;
-            transform: rotate(180deg);
+            fill: #D1A748 !important;
+            transform: rotate(180deg) !important;
         }
-        .faq-content {
-            background: #FFFFFF;
-            color: #475569;
+        .faq-content,
+        .elementor-accordion .elementor-tab-content,
+        .elementor-toggle .elementor-tab-content {
+            background: #FFFFFF !important;
+            background-color: #FFFFFF !important;
+            color: #475569 !important;
         }
 
         .floating-wa-btn {
@@ -866,14 +898,53 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
             <div class="space-y-3.5" id="faqAccordion">
                 
                 <?php
+                // Garante que a lista oficial completa com as 10 perguntas seja sempre carregada
+                $official_faqs = [
+                    [
+                        'q' => '1. Como funciona o primeiro atendimento com um advogado?',
+                        'a' => 'O primeiro contato é utilizado para compreender o caso, identificar os principais documentos e avaliar juridicamente as medidas que podem ser adotadas. O atendimento pode ser realizado de forma presencial ou online.'
+                    ],
+                    [
+                        'q' => '2. Posso enviar documentos pelo WhatsApp?',
+                        'a' => 'Sim. Documentos e informações iniciais podem ser encaminhados pelo WhatsApp para facilitar a análise do caso e o atendimento jurídico.'
+                    ],
+                    [
+                        'q' => '3. Posso contratar o escritório mesmo estando fora de Aracaju?',
+                        'a' => 'Sim. O escritório realiza atendimento online e pode atuar em processos eletrônicos em outras cidades e estados, de acordo com as particularidades de cada demanda.'
+                    ],
+                    [
+                        'q' => '4. O escritório atua em Direito Trabalhista para empregados e empresas?',
+                        'a' => 'Sim. O atendimento abrange trabalhadores e empresas em questões como rescisão, verbas trabalhistas, horas extras, acidentes de trabalho, defesa empresarial e consultoria preventiva, sempre observando eventual conflito de interesses.'
+                    ],
+                    [
+                        'q' => '5. O escritório atua com divórcio, guarda e pensão alimentícia?',
+                        'a' => 'Sim. A atuação em Direito de Família compreende divórcio consensual ou litigioso, guarda dos filhos, pensão alimentícia, regulamentação de convivência, união estável e partilha de bens.'
+                    ],
+                    [
+                        'q' => '6. Quais problemas imobiliários podem ser analisados?',
+                        'a' => 'O escritório atua em questões envolvendo compra e venda de imóveis, distrato imobiliário, atraso de obras, loteamentos, contratos, locações, despejo, regularização e usucapião.'
+                    ],
+                    [
+                        'q' => '7. O escritório presta assessoria jurídica para empresas?',
+                        'a' => 'Sim. A atuação empresarial envolve elaboração e revisão de contratos, cobranças, prevenção de riscos, conflitos entre sócios e acompanhamento jurídico das atividades da empresa.'
+                    ],
+                    [
+                        'q' => '8. O escritório realiza inventário e partilha de herança?',
+                        'a' => 'Sim. O inventário pode ser judicial ou extrajudicial, dependendo das circunstâncias do caso. Também são analisadas questões envolvendo herança, partilha de bens e direitos sucessórios.'
+                    ],
+                    [
+                        'q' => '9. O escritório atua em casos de erro médico e procedimentos estéticos?',
+                        'a' => 'Sim. Podem ser analisados casos envolvendo possível erro médico ou odontológico, falha em hospitais e clínicas, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico e outros danos relacionados à prestação de serviços de saúde.'
+                    ],
+                    [
+                        'q' => '10. Problemas com planos de saúde também são atendidos?',
+                        'a' => 'Sim. O escritório pode analisar negativas de cobertura, tratamentos, cirurgias, medicamentos, exames, internações, reembolsos e outras controvérsias envolvendo planos de saúde.'
+                    ]
+                ];
+
                 $saved_faqs = get_post_meta( $post_id, 'jsa_faqs_list', true );
-                // Se o banco tiver a lista antiga menor que 10 ou vazia, usa a lista oficial completa
                 if ( ! is_array( $saved_faqs ) || empty( $saved_faqs ) || count( $saved_faqs ) < 10 ) {
-                    if ( function_exists( 'jsa_get_default_faqs' ) ) {
-                        $saved_faqs = jsa_get_default_faqs();
-                    } else {
-                        $saved_faqs = [];
-                    }
+                    $saved_faqs = $official_faqs;
                 }
 
                 foreach ( $saved_faqs as $findex => $faq_item ) :
