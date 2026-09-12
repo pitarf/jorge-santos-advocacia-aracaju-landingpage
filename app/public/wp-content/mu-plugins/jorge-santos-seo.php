@@ -290,19 +290,21 @@ function jsa_inject_seo_head() {
     // FAQ items para Schema JSON-LD
     $post_id = get_option( 'page_on_front' ) ?: 14;
     $saved_faqs = get_post_meta( $post_id, 'jsa_faqs_list', true );
-    if ( ! is_array( $saved_faqs ) || empty( $saved_faqs ) ) {
+    if ( ! is_array( $saved_faqs ) || empty( $saved_faqs ) || count( $saved_faqs ) < 10 ) {
         if ( function_exists( 'jsa_get_default_faqs' ) ) {
             $saved_faqs = jsa_get_default_faqs();
         } else {
             $saved_faqs = [
-                ['q' => 'Como funciona o primeiro atendimento?', 'a' => 'O cliente apresenta sua situação, os principais fatos e, quando necessário, os documentos relacionados ao problema. A partir dessas informações é possível realizar uma análise inicial da demanda.'],
-                ['q' => 'Posso enviar documentos pelo WhatsApp?', 'a' => 'Documentos podem ser encaminhados por meio digital quando essa modalidade for utilizada no atendimento do escritório.'],
-                ['q' => 'Posso contratar advogado mesmo estando fora de Aracaju?', 'a' => 'Diversas etapas da advocacia podem ser realizadas digitalmente, dependendo do tipo de demanda e dos atos necessários.'],
-                ['q' => 'O escritório atende trabalhadores e empresas?', 'a' => 'Sim. Na área trabalhista, a atuação pode envolver tanto trabalhadores quanto empregadores e empresas.'],
-                ['q' => 'Vocês trabalham com divórcio?', 'a' => 'Sim. O atendimento pode envolver divórcio consensual ou litigioso, além de questões patrimoniais e familiares relacionadas.'],
-                ['q' => 'O escritório atua com problemas imobiliários?', 'a' => 'Sim. São analisadas questões relacionadas a contratos, compra e venda, regularização, usucapião, distrato, imóveis na planta, locação e conflitos imobiliários.'],
-                ['q' => 'Vocês oferecem assessoria para empresas?', 'a' => 'Sim. O escritório presta atendimento em Direito Empresarial, incluindo contratos, cobranças, prevenção de riscos, questões societárias e defesa empresarial.'],
-                ['q' => 'O escritório realiza inventário?', 'a' => 'O escritório presta assessoria jurídica em inventários judiciais e extrajudiciais, herança, partilha e questões sucessórias.']
+                ['q' => '1. Como funciona o primeiro atendimento com um advogado?', 'a' => 'O primeiro contato é utilizado para compreender o caso, identificar os principais documentos e avaliar juridicamente as medidas que podem ser adotadas. O atendimento pode ser realizado de forma presencial ou online.'],
+                ['q' => '2. Posso enviar documentos pelo WhatsApp?', 'a' => 'Sim. Documentos e informações iniciais podem ser encaminhados pelo WhatsApp para facilitar a análise do caso e o atendimento jurídico.'],
+                ['q' => '3. Posso contratar o escritório mesmo estando fora de Aracaju?', 'a' => 'Sim. O escritório realiza atendimento online e pode atuar em processos eletrônicos em outras cidades e estados, de acordo com as particularidades de cada demanda.'],
+                ['q' => '4. O escritório atua em Direito Trabalhista para empregados e empresas?', 'a' => 'Sim. O atendimento abrange trabalhadores e empresas em questões como rescisão, verbas trabalhistas, horas extras, acidentes de trabalho, defesa empresarial e consultoria preventiva, sempre observando eventual conflito de interesses.'],
+                ['q' => '5. O escritório atua com divórcio, guarda e pensão alimentícia?', 'a' => 'Sim. A atuação em Direito de Família compreende divórcio consensual ou litigioso, guarda dos filhos, pensão alimentícia, regulamentação de convivência, união estável e partilha de bens.'],
+                ['q' => '6. Quais problemas imobiliários podem ser analisados?', 'a' => 'O escritório atua em questões envolvendo compra e venda de imóveis, distrato imobiliário, atraso de obras, loteamentos, contratos, locações, despejo, regularização e usucapião.'],
+                ['q' => '7. O escritório presta assessoria jurídica para empresas?', 'a' => 'Sim. A atuação empresarial envolve elaboração e revisão de contratos, cobranças, prevenção de riscos, conflitos entre sócios e acompanhamento jurídico das atividades da empresa.'],
+                ['q' => '8. O escritório realiza inventário e partilha de herança?', 'a' => 'Sim. O inventário pode ser judicial ou extrajudicial, dependendo das circunstâncias do caso. Também são analisadas questões envolvendo herança, partilha de bens e direitos sucessórios.'],
+                ['q' => '9. O escritório atua em casos de erro médico e procedimentos estéticos?', 'a' => 'Sim. Podem ser analisados casos envolvendo possível erro médico ou odontológico, falha em hospitais e clínicas, cirurgia plástica, procedimentos estéticos malsucedidos, falha de diagnóstico e outros danos relacionados à prestação de serviços de saúde.'],
+                ['q' => '10. Problemas com planos de saúde também são atendidos?', 'a' => 'Sim. O escritório pode analisar negativas de cobertura, tratamentos, cirurgias, medicamentos, exames, internações, reembolsos e outras controvérsias envolvendo planos de saúde.']
             ];
         }
     }

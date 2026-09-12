@@ -859,28 +859,20 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-14" data-aos="fade-up">
                 <span class="text-xs font-bold uppercase tracking-widest text-brand-goldDark">Tire Suas Dúvidas</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-2">Perguntas Frequentes</h2>
-                <p class="text-slate-600 text-sm sm:text-base mt-2">Respostas diretas para as principais dúvidas sobre atendimento em Aracaju.</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy mt-2">Dúvidas frequentes sobre nossos serviços jurídicos em Aracaju</h2>
+                <p class="text-slate-600 text-sm sm:text-base mt-3 max-w-2xl mx-auto">Encontre respostas para algumas das principais dúvidas sobre atendimento, contratação e áreas de atuação.</p>
             </div>
 
             <div class="space-y-3.5" id="faqAccordion">
                 
                 <?php
                 $saved_faqs = get_post_meta( $post_id, 'jsa_faqs_list', true );
-                if ( ! is_array( $saved_faqs ) || empty( $saved_faqs ) ) {
+                // Se o banco tiver a lista antiga menor que 10 ou vazia, usa a lista oficial completa
+                if ( ! is_array( $saved_faqs ) || empty( $saved_faqs ) || count( $saved_faqs ) < 10 ) {
                     if ( function_exists( 'jsa_get_default_faqs' ) ) {
                         $saved_faqs = jsa_get_default_faqs();
                     } else {
-                        $saved_faqs = [
-                            ['q' => 'Como funciona o primeiro atendimento?', 'a' => 'O cliente apresenta sua situação, os principais fatos e, quando necessário, os documentos relacionados ao problema. A partir dessas informações é possível realizar uma análise inicial da demanda.'],
-                            ['q' => 'Posso enviar documentos pelo WhatsApp?', 'a' => 'Documentos podem ser encaminhados por meio digital quando essa modalidade for utilizada no atendimento do escritório.'],
-                            ['q' => 'Posso contratar advogado mesmo estando fora de Aracaju?', 'a' => 'Diversas etapas da advocacia podem ser realizadas digitalmente, dependendo do tipo de demanda e dos atos necessários.'],
-                            ['q' => 'O escritório atende trabalhadores e empresas?', 'a' => 'Sim. Na área trabalhista, a atuação pode envolver tanto trabalhadores quanto empregadores e empresas.'],
-                            ['q' => 'Vocês trabalham com divórcio?', 'a' => 'Sim. O atendimento pode envolver divórcio consensual ou litigioso, além de questões patrimoniais e familiares relacionadas.'],
-                            ['q' => 'O escritório atua com problemas imobiliários?', 'a' => 'Sim. São analisadas questões relacionadas a contratos, compra e venda, regularização, usucapião, distrato, imóveis na planta, locação e conflitos imobiliários.'],
-                            ['q' => 'Vocês oferecem assessoria para empresas?', 'a' => 'Sim. O escritório presta atendimento em Direito Empresarial, incluindo contratos, cobranças, prevenção de riscos, questões societárias e defesa empresarial.'],
-                            ['q' => 'O escritório realiza inventário?', 'a' => 'O escritório presta assessoria jurídica em inventários judiciais e extrajudiciais, herança, partilha e questões sucessórias.']
-                        ];
+                        $saved_faqs = [];
                     }
                 }
 
@@ -889,10 +881,10 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     $a = $faq_item['a'] ?? '';
                     $is_first = ( $findex === 0 );
                 ?>
-                    <div class="faq-item" data-aos="fade-up" data-aos-delay="<?php echo min( ($findex + 1) * 75, 400 ); ?>">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="<?php echo min( ($findex + 1) * 60, 400 ); ?>">
                         <button class="faq-toggle <?php echo $is_first ? 'active-accordion' : ''; ?> w-full p-5 text-left font-bold text-sm sm:text-base flex justify-between items-center focus:outline-none">
-                            <span><?php echo esc_html( $q ); ?></span>
-                            <i class="fa-solid fa-chevron-down text-brand-gold transition-transform duration-200"></i>
+                            <span class="pr-3"><?php echo esc_html( $q ); ?></span>
+                            <i class="fa-solid fa-chevron-down text-brand-gold shrink-0 transition-transform duration-200"></i>
                         </button>
                         <div class="faq-content <?php echo $is_first ? '' : 'hidden'; ?> p-5 text-xs sm:text-sm text-slate-600 border-t border-slate-100 leading-relaxed">
                             <?php echo wp_kses_post( $a ); ?>
@@ -900,6 +892,20 @@ $sobre_image = get_post_meta( $post_id, 'jsa_sobre_image', true ) ?: home_url( '
                     </div>
                 <?php endforeach; ?>
 
+            </div>
+
+            <!-- CTA APÓS A ÚLTIMA PERGUNTA -->
+            <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-brand-bgLight border border-slate-200 text-center shadow-sm" data-aos="fade-up">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-brand-gold/40 text-brand-goldDark text-xs font-bold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-comments text-brand-gold"></i>
+                    <span>Atendimento Personalizado</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-brand-navy mb-2">Ainda tem dúvidas sobre o seu caso?</h3>
+                <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto mb-6">Converse com nossa equipe e explique sua situação.</p>
+                <a href="<?php echo esc_url( $hero_cta_link ); ?>" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-accent-green hover:bg-accent-hoverGreen text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-xl shrink-0"></i>
+                    <span>Falar pelo WhatsApp</span>
+                </a>
             </div>
         </div>
     </section>

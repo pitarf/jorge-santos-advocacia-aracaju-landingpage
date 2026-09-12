@@ -2,6 +2,18 @@
 
 Todas as modificações notáveis neste projeto estão documentadas neste arquivo.
 
+## [3.5.3] - 2026-09-12
+### Modificado
+- **Reformulação Completa da Seção de Dúvidas Frequentes (FAQ)**:
+  - Título e subtítulo da seção atualizados com redação persuasiva e elegante:
+    - *Dúvidas frequentes sobre nossos serviços jurídicos em Aracaju*
+    - *Encontre respostas para algumas das principais dúvidas sobre atendimento, contratação e áreas de atuação.*
+  - Implementação das **10 perguntas e respostas completas**, abrangendo Atendimento (Presencial e Online), Envio de Documentos via WhatsApp, Atuação fora de Aracaju, Direito Trabalhista, Divórcio/Família, Imobiliário, Empresarial, Inventário/Herança, Erro Médico/Estética e Planos de Saúde.
+  - Reforço visual: bordas cinza-claro sutis (`#E2E8F0`), hover dourado nobre (`#D1A748`), cabeçalho escuro quando aberto e chevrons em dourado, sem resquício de cores padrão do Elementor.
+  - Adicionado **CTA de conversão após a última pergunta**:
+    - *"Ainda tem dúvidas sobre o seu caso? Converse com nossa equipe e explique sua situação. [Falar pelo WhatsApp]"*.
+  - Sincronização simultânea nos dados estruturados Schema.org `FAQPage` (`jorge-santos-seo.php`) para geração de Rich Snippets no Google.
+
 ## [3.5.2] - 2026-09-12
 ### Modificado
 - **Otimização de Espaçamento e Respiro da Barra de Navegação (Navbar)**:
